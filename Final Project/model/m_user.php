@@ -5,7 +5,7 @@
 
         public function create_1_user( $username, $password, $email, $role )
         {
-            $sql = "INSERT INTO User (user_name, user_pass, user_email)
+            $sql = "INSERT INTO user (user_name, user_pass, user_email)
                     VALUES ('{$username}', '{$password}', '{$email}')";
 
             $this->set_query($sql);
@@ -15,7 +15,7 @@
 
         public function list_all_user() {
 
-            $sql = "SELECT * FROM User";
+            $sql = "SELECT * FROM user";
             $this->set_query($sql);
 
             // echo "$this->query <br>";0799
@@ -23,7 +23,7 @@
             $result = $this->excute_query();
 
             $list_user = array();
-            
+
 
             if ($result->num_rows > 0) {
                 // output data of each row
@@ -39,13 +39,13 @@
 
         public function signin_user($username, $password)
         {
-            $sql = "SELECT  * 
-                    FROM User
-                    WHERE user_name='$username' AND user_pass = '$password'
-                    LIMIT 1 ";
+            $sql = "SELECT user_name, role
+                    FROM user
+                    WHERE user_pass = '$password' AND user_name = '$username'
+                    ";
             $this->set_query($sql);
 
-            // echo "$this->query <br>";0799
+            //echo "$this->query <br>";
 
             $result = $this->excute_query();
             $this->close();
@@ -68,6 +68,4 @@
             }
         }
     }
-
-
 ?>

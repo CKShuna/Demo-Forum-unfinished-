@@ -33,7 +33,7 @@
                         <a class="nav-link" > <?php echo $_SESSION["loginUSER"] ?>  </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="controller/c_signout.php" > Sign Out</a>
+                        <a class="nav-link" href="control/c_signout.php" > Sign Out</a>
                     </li>
 
                 <?php } else { ?>
