@@ -12,10 +12,10 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Create Category</a>
+                    <a class="nav-link" href="create_category.php">Create Category</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Create Topic</a>
+                    <a class="nav-link" href="create_topic.php">Create Topic</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="model/init.php">Init</a>
