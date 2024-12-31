@@ -17,5 +17,9 @@
             padding: 60px 0;
             text-align: center;
         }
+        body {
+            background-color: #d4edda; /* Light Green */
+            font-family: Arial, Helvetica, sans-serif; /* Optional: sets the default font */
+        }
     </style>
 </head>

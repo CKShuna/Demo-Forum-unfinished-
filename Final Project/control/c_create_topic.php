@@ -9,11 +9,11 @@
         $topic_by = $_POST['topic_by'] ?? '';
         $topic_cat = $_POST['topic_cat'] ?? '';
 
-        if (empty($topic_subject) || empty($topic_by) || empty($topic_cat)) {
-            $_SESSION['error'] = "All fields are required.";
-            header("Location: create_category.php");
-            exit();
-        }
+        // if (empty($topic_subject) || empty($topic_by) || empty($topic_cat)) {
+        //     $_SESSION['error'] = "All fields are required.";
+        //     header("Location: create_category.php");
+        //     exit();
+        // }
 
         $topicModel = new Topic();
         $result = $topicModel->create_topic($topic_subject, $topic_by, $topic_cat);
@@ -26,9 +26,6 @@
 
         header("Location: ../index.php");
     }
-
-    $categoryModel = new Category();
-    $categories = $categoryModel->list_all_cat();
 
     require_once('create_topic.php');
 ?>

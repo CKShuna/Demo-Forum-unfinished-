@@ -25,6 +25,11 @@
             $this->query = $sql;
         }
 
+        public function prepare($sql)
+        {
+            return $this->conn->prepare($sql);
+        }
+
         public function excute_query()
         {
             $result = $this->conn->query( $this->query );

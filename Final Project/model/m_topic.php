@@ -16,12 +16,12 @@
             }
         }
 
-        public function list_all_topic() {
-            $sql = "SELECT * FROM topic";
+        public function list_all_topic($cat_id) {
+            $sql = "SELECT topic_id, topic_subject FROM topic WHERE topic_cat = {$cat_id}";
 
             $this->set_query($sql);
             $result = $this->excute_query();
-            $list_topic = array();
+            $list_cat = array();
 
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
@@ -29,7 +29,9 @@
                 }
             } 
             
-            return $list_cat;
+            if ($list_cat != 0) {
+                return $list_cat;
+            }
         }
     }
 ?>
